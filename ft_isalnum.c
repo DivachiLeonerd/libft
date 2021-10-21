@@ -7,5 +7,4 @@ int	isalnum(int c)
 	}
 	else
 		return (0);
-	
 }
