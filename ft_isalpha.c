@@ -9,6 +9,8 @@
 /*   Updated: 2021/10/18 18:32:46 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <ctype.h>
+#include <stdio.h>
 
 int	ft_isalpha(unsigned char c)
 {
