@@ -22,4 +22,6 @@ void			*ft_memchr(const void *s, int c, unsigned int n);
 int				ft_memcmp(const void *s1, const void *s2, unsigned int n);
 char			*ft_strnstr(const char *haystack, const char *needle, unsigned int len);
 int				ft_atoi(const char *str);
+void			*ft_calloc(unsigned int count, unsigned int size);
+char			*ft_strdup(const char *s1);
 #endif

@@ -1,4 +1,4 @@
-#include "mylib_ft"
+#include "libft.h"
 int	isalnum(int c)
 {
 	if (isdigit(c) || isalpha(c))
