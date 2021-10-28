@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/28 16:15:11 by atereso-          #+#    #+#             */
+/*   Updated: 2021/10/28 16:16:10 by atereso-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int	ft_atoi(const char *str)
 {
-	int negative_counter;
+	int	negative_counter;
 	int	number;
 	int	i;
 
@@ -9,7 +21,7 @@ int	ft_atoi(const char *str)
 	negative_counter = 0;
 	while (str[i])
 	{
-		if ((str[i] >= 48 && str[i] <=57) || (str[i] == 43 || str[i] == 45))
+		if ((str[i] >= 48 && str[i] <= 57) || (str[i] == 43 || str[i] == 45))
 		{
 			if (str[i] == 45)
 			{
@@ -17,17 +29,11 @@ int	ft_atoi(const char *str)
 				i++;
 			}
 			else if (str[i] == 43)
-			{
-				i++;			
-			}
+				i++;
 			else if (str[i] >= 10)
-			{
 				number = (str[i] - 48) * 10 + number;
-			}
 			else if (str [i] < 10)
-			{
 				number = str[i] - 48;
-			}
 		}
 		return (number);
 	}

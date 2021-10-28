@@ -1,4 +1,16 @@
-void *ft_memset(void *mem_loc, int c, int n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/28 16:24:41 by atereso-          #+#    #+#             */
+/*   Updated: 2021/10/28 16:25:00 by atereso-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	*ft_memset(void *mem_loc, int c, int n)
 {
 	int	counter;
 	int	i;
@@ -7,7 +19,7 @@ void *ft_memset(void *mem_loc, int c, int n)
 	counter = 0;
 	while (counter <= n)
 	{
-		((int*)mem_loc)[counter] = c;
+		((int *)mem_loc)[counter] = c;
 		counter++;
 	}
 }

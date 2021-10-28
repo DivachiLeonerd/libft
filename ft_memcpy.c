@@ -1,4 +1,16 @@
-void	*ft_memcpy(void *dest, const void *src, unsigned n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/28 16:53:08 by atereso-          #+#    #+#             */
+/*   Updated: 2021/10/28 16:53:13 by atereso-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 {
-	//atencao n fiz
+	
 }

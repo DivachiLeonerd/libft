@@ -1,9 +1,23 @@
-char *ft_strchr(const char *s, int c)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/28 16:25:09 by atereso-          #+#    #+#             */
+/*   Updated: 2021/10/28 16:27:11 by atereso-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdlib.h>
+
+char	*ft_strchr(const char *s, int c)
 {
 	s++;
-	while (s-1)
+	while (s - 1)
 	{
-		if (*s == (char*)c)
+		if (*s == (char *)c)
 			return (s);
 		else
 			s++;
