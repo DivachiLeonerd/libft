@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 16:27:29 by atereso-          #+#    #+#             */
-/*   Updated: 2021/10/29 14:41:55 by afonso           ###   ########.fr       */
+/*   Created: 2021/10/29 16:38:26 by afonso            #+#    #+#             */
+/*   Updated: 2021/10/29 19:09:48 by afonso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef unsigned int	t_size_t;
+#include <stdlib.h>
 
-t_size_t	strlcat(char *dst, const char *src, t_size_t dstsize)
+typedef unsigned int	t_size_t;
+char	*ft_substr(char const *s, t_size_t start, t_size_t len)
 {
 	int	i;
-	int	counter;
+	char	*alloc;
 
-	counter = dstsize;
 	i = 0;
-	while (counter > 0 && *src)
+	alloc = malloc(len * sizeof(char));
+	if (!alloc)
 	{
-		while (*dst)
-		{
-			dst++;
-			counter--;
-		}
-		*dst = src[i];
-		dst++;
+		return (NULL);
+	}
+	while (*s)
+	{
+		alloc[i] = *s;
+		s++;
 		i++;
 	}
-	*dst = '/0';
-	return (i + dstsize);
+	return (alloc);
 }
