@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 17:25:39 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/03 16:59:13 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/03 17:00:10 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@
 #include <stdlib.h>
 
 typedef unsigned int	t_size_t;
+
 char	*ft_substr(char const *s, t_size_t start, t_size_t len)
 {
-	int	i;
+	int		i;
 	char	*alloc;
 
 	i = 0;
