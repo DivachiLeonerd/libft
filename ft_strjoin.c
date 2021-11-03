@@ -1,35 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 16:27:29 by atereso-          #+#    #+#             */
-/*   Updated: 2021/10/29 14:41:55 by afonso           ###   ########.fr       */
+/*   Created: 2021/10/29 14:47:47 by afonso            #+#    #+#             */
+/*   Updated: 2021/10/29 15:53:35 by afonso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef unsigned int	t_size_t;
+#include<stdlib.h>
 
-t_size_t	strlcat(char *dst, const char *src, t_size_t dstsize)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
-	int	counter;
+	int		i;
+	int		j;
+	char	*alloc;
 
-	counter = dstsize;
+	j = 0;
 	i = 0;
-	while (counter > 0 && *src)
-	{
-		while (*dst)
-		{
-			dst++;
-			counter--;
-		}
-		*dst = src[i];
-		dst++;
+	while (s1[i])
 		i++;
+	while (s2[i])
+	{
+		j++;
 	}
-	*dst = '/0';
-	return (i + dstsize);
+	alloc = malloc((i + j - 1) * sizeof(char));
+	if (!alloc)
+	{
+		return (NULL);
+	}
+	i = 0;
+	j = 0;
+	while (s2[j - 1])
+	{
+		while (s1[i])
+		{
+			alloc[i] = s1[i],
+			i++;
+		}
+		alloc[i] = s2[j];
+		i++;
+		j++;
+	}
+	return (alloc);
 }
