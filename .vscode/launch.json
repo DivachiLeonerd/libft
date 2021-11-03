@@ -7,12 +7,12 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "/home/afonso/Documents/GitHub/libft",
+      "cwd": "/Users/atereso-/Documents/lib_ft/libft",
       "environment": [],
-      "program": "/home/afonso/Documents/GitHub/libft/build/Debug/outDebug",
+      "program": "/Users/atereso-/Documents/lib_ft/libft/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
-      "miDebuggerPath": "/usr/bin/gdb",
+      "miDebuggerPath": "/usr/bin/lldb",
       "externalConsole": false,
       "setupCommands": [
         {
