@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 10:11:03 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/09 15:59:22 by afonso           ###   ########.fr       */
+/*   Created: 2021/11/09 16:01:10 by afonso            #+#    #+#             */
+/*   Updated: 2021/11/09 16:13:17 by afonso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include"libft.h"
+#include<stdlib.h>
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	void	*_content;
-	int		i;
-	char	*parameter;
-	t_list	new_list;
+	while (lst)
+	{
+		if (lst->content)
+		{
+			del(lst->content);
+		}
+		f(lst->content);
+	}
 
-	parameter = (char *)content;
-	i = 0;
-	_content = malloc(sizeof(content));
-	if (!_content)
-	{
-		return (NULL);
-	}
-	while (parameter[i])
-	{
-		((char *)_content)[i] = parameter[i];
-		i++;
-	}
-	new_list.content = _content;
-	new_list.next = NULL;
-	return ((t_list *)_content);
 }
