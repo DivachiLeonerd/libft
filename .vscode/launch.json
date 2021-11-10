@@ -11,7 +11,7 @@
       "environment": [],
       "program": "/Users/atereso-/Documents/lib_ft/libft/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
-      "MIMode": "lldb",
+      "MIMode": "gdb",
       "miDebuggerPath": "/usr/bin/lldb",
       "externalConsole": false,
       "setupCommands": [

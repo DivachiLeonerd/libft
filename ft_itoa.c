@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:24:44 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/03 17:46:34 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/05 13:24:45 by afonso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,18 @@ char	*ft_itoa(int n)
 		n = -n;
 		i++;
 	}
-	while (n >= 10)
+	while (n != 0)
 	{
 		ch = n % 10 + 48;
 		string[i] = ch;
 		n = n / 10;
 		i++;
 	}
+	reverse_string(string);
+	return (string);
 }
 
-static	char	*reverse_string(char *string)
+static	void	reverse_string(char *string)
 {
 	char	tmp;
 	int		strlen;
@@ -59,16 +61,16 @@ static	char	*reverse_string(char *string)
 	}
 }
 
-static char	*alloc_string(int n)
+static	char	*alloc_string(int n)
 {
-	int				base;
 	unsigned int	power;
 	char			*_string;
 
-	base = n;
-	while (base > 0)
+	if (n < 0)
+		power++;
+	while (n > 0)
 	{
-		base = base / 10;
+		n = n / 10;
 		power++;
 	}
 	_string = malloc(power * sizeof(char));
