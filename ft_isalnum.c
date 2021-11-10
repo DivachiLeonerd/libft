@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:17:50 by atereso-          #+#    #+#             */
-/*   Updated: 2021/10/28 16:18:03 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/10 17:53:29 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	isalnum(int c)
 {
-	if (isdigit(c) || isalpha(c))
+	if (ft_isdigit(c) || ft_isalpha(c))
 	{
 		return (c);
 	}

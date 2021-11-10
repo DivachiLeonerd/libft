@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
+/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 17:54:23 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/05 13:09:44 by afonso           ###   ########.fr       */
+/*   Updated: 2021/11/10 18:21:45 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ void	ft_putstr_fd(char *s, int fd)
 	{
 		i++;
 	}
-	char	buf[i];
-	
 	buf[i] = '\0';
 	write(fd, buf, i);
 }

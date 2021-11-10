@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
+/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:24:44 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/05 13:24:45 by afonso           ###   ########.fr       */
+/*   Updated: 2021/11/10 17:58:38 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdlib.h>
+
+static	char	*alloc_string(int n);
+
+static	void	reverse_string(char *string);
 
 char	*ft_itoa(int n)
 {
