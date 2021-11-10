@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
+/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:12:07 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/05 18:13:34 by afonso           ###   ########.fr       */
+/*   Updated: 2021/11/10 18:35:38 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	newstring = malloc(i * sizeof(char));
 	if (!newstring)
 	{
-		return(NULL);
+		return (NULL);
 	}
-
 	newstring[i - 1] = '\0';
 	i = 0;
 	while (newstring[i])
