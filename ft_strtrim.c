@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
+/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 15:54:17 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/05 18:10:43 by afonso           ###   ########.fr       */
+/*   Updated: 2021/11/10 18:44:27 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*first_marker;
 	char	*alloc;
 
@@ -43,7 +43,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (alloc);
 }
 
-static	char	*find_lastmark(char const *s1, char const *set, char	*first_marker)
+static	char	*find_lastmark(char const *s1, char const *set,
+	char	*first_marker)
 {
 	int		i;
 	int		j;
