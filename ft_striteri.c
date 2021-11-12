@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 16:27:20 by atereso-          #+#    #+#             */
-/*   Updated: 2021/10/28 16:27:21 by atereso-         ###   ########.fr       */
+/*   Created: 2021/11/12 11:40:48 by atereso-          #+#    #+#             */
+/*   Updated: 2021/11/12 11:51:03 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(const char *s1, const char *s2)
+#include"libft.h"
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	while (*s1 && *s2)
+	unsigned int	i;
+
+	i = 0;
+	while (s[i])
 	{
-		if (*s1 == *s2)
-		{
-			s1++;
-			s2++;
-		}
-		else
-			return (s1 - s2);
+		f(i, s);
+		i++;
+		s++;
 	}
 }

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
+/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:27:29 by atereso-          #+#    #+#             */
-/*   Updated: 2021/10/29 14:41:55 by afonso           ###   ########.fr       */
+/*   Updated: 2021/11/12 11:56:49 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 typedef unsigned int	t_size_t;
 
-t_size_t	strlcat(char *dst, const char *src, t_size_t dstsize)
+t_size_t	ft_strlcat(char *dst, const char *src, t_size_t dstsize)
 {
 	int	i;
 	int	counter;
@@ -30,6 +30,6 @@ t_size_t	strlcat(char *dst, const char *src, t_size_t dstsize)
 		dst++;
 		i++;
 	}
-	*dst = '/0';
+	*dst = '\0';
 	return (i + dstsize);
 }

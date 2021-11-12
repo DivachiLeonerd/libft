@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:15:11 by atereso-          #+#    #+#             */
-/*   Updated: 2021/10/28 16:16:10 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/12 11:05:37 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,12 @@ int	ft_atoi(const char *str)
 				negative_counter++;
 				i++;
 			}
-			else if (str[i] == 43)
-				i++;
 			else if (str[i] >= 10)
 				number = (str[i] - 48) * 10 + number;
 			else if (str [i] < 10)
 				number = str[i] - 48;
+			i++;
 		}
-		return (number);
 	}
+	return (number);
 }

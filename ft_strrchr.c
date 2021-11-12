@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:51:08 by atereso-          #+#    #+#             */
-/*   Updated: 2021/10/28 16:51:43 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/12 14:03:23 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	while (i >= 0)
 	{
-		if (*s == (char *)c)
-			return (s);
+		if ((int)*s == c)
+			return ((char *)s);
 		else
 			s--;
 	}
