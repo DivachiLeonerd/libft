@@ -6,11 +6,13 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 10:16:20 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/03 19:26:58 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/12 11:21:43 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdlib.h>
+
+static char	*alloc_string(char const *s, char c, char	**split, int index);
 
 char	**ft_split(char const *s, char c)
 {
@@ -30,11 +32,14 @@ char	**ft_split(char const *s, char c)
 	}
 	stringnum++;
 	split = malloc((stringnum) * sizeof(char *));
+	if (!split)
+		return (NULL);
 	while (stringnum > string_count)
 	{
 		alloc_string(s, c, split, string_count);
 		string_count++;
 	}
+	return (split);
 }
 
 static char	*alloc_string(char const *s, char c,
@@ -51,8 +56,6 @@ static char	*alloc_string(char const *s, char c,
 	i++;
 	split[index] = malloc(i * sizeof(char));
 	if (!split[index])
-	{
 		return (NULL);
-	}
 	return (split[index]);
 }

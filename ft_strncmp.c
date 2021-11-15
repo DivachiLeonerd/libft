@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 15:11:47 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/10 18:51:43 by atereso-         ###   ########.fr       */
+/*   Created: 2021/10/28 16:27:20 by atereso-          #+#    #+#             */
+/*   Updated: 2021/11/12 12:16:04 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
-#include<stdlib.h>
-
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+int	ft_strncmp(const char *s1, const char *s2)
 {
-	t_list	*temp;
-
-	while ((*lst)->next)
+	while (*s1 && *s2)
 	{
-		del((*lst)->content);
-		temp = *lst;
-		free(temp);
-		lst++;
+		if (*s1 == *s2)
+		{
+			s1++;
+			s2++;
+		}
+		else
+			return (s1 - s2);
 	}
-	lst = NULL;
-	return ;
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:24:44 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/10 17:58:38 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/12 10:57:12 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static	void	reverse_string(char *string)
 	{
 		tmp = *string;
 		*string = *last_marker;
-		last_marker = tmp;
+		*last_marker = tmp;
 		i++;
 	}
 }

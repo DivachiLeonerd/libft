@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:25:09 by atereso-          #+#    #+#             */
-/*   Updated: 2021/10/28 16:27:11 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/12 11:38:01 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	*ft_strchr(const char *s, int c)
 	s++;
 	while (s - 1)
 	{
-		if (*s == (char *)c)
-			return (s);
+		if ((int)*s == c)
+			return ((char *)s);
 		else
 			s++;
 	}

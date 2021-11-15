@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
+/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 14:47:47 by afonso            #+#    #+#             */
-/*   Updated: 2021/10/29 15:53:35 by afonso           ###   ########.fr       */
+/*   Updated: 2021/11/10 18:47:21 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	{
 		while (s1[i])
 		{
-			alloc[i] = s1[i],
+			alloc[i] = s1[i];
 			i++;
 		}
 		alloc[i] = s2[j];
