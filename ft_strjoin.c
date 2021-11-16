@@ -6,11 +6,13 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 14:47:47 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/16 19:07:33 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 19:17:24 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
+
+static	int	find_mallocsize(int i, int j, char const *s1, char const *s2);
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

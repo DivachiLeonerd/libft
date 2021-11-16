@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 16:01:10 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/16 18:49:20 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 19:13:41 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	newlst_head = ft_lstnew(f(lst));
 	while (lst)
 	{
-		ft_lstadd_back(newlst_head, ft_lstnew(f(lst)));
 		if (!ft_lstnew(f(lst)))
 		{
 			ft_lstdelone(ft_lstlast(newlst_head), del);
 			return (NULL);
 		}
+		ft_lstadd_back(newlst_head, ft_lstnew(f(lst)));
 	}
 }
 /*
