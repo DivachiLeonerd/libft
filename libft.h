@@ -6,12 +6,16 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:06:29 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/10 17:24:41 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 17:42:22 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# include<unistd.h>
+# include<stdlib.h>
+# include<stdio.h>
 
 typedef unsigned int	t_size_t;
 int			ft_isalpha(unsigned char c);

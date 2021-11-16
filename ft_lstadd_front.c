@@ -6,11 +6,10 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 11:04:09 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/12 14:51:07 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:55:11 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
 #include"libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)

@@ -6,30 +6,26 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 16:01:10 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/12 17:52:46 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:49:20 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-#include<stdlib.h>
-
-char	*apply_f(t_list *lst, void *(*f)(void *), void (*del)(void *))
-{
-	t_list			*newlist;
-	unsigned int	i;
-
-	i = 0;
-	while (lst)
-	{
-		if (!f(lst))
-			ft_lstdelone(lst, del);
-		
-	}
-}
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list			*newlist;
+	t_list			*newlst_head;
+
+	newlst_head = ft_lstnew(f(lst));
+	while (lst)
+	{
+		ft_lstadd_back(newlst_head, ft_lstnew(f(lst)));
+		if (!ft_lstnew(f(lst)))
+		{
+			ft_lstdelone(ft_lstlast(newlst_head), del);
+			return (NULL);
+		}
+	}
 }
 /*
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))

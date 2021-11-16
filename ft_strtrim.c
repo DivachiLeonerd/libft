@@ -6,11 +6,11 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 15:54:17 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/12 14:44:18 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:57:36 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include"libft.h"
 
 static	char	*find_lastmark(char const *s1, char const *set,
 					char *first_marker);

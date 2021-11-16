@@ -6,11 +6,10 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 18:14:44 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/12 11:13:23 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:56:31 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
 #include"libft.h"
 
 void	ft_putendl_fd(char *s, int fd)

@@ -6,11 +6,11 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 15:56:05 by atereso-          #+#    #+#             */
-/*   Updated: 2021/10/28 16:05:42 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:56:55 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
