@@ -6,17 +6,14 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:16:20 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/16 19:33:18 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 20:06:20 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_bzero(void *s, unsigned int n)
 {
-	while (((char *)s) && n > 0)
-	{
-		(*(char *)s) = '\0';
-		(*(char *)s)++;
-		n--;
-	}
+	ft_memset(s, 0, n);
 	return ;
 }

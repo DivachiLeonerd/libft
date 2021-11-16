@@ -6,13 +6,13 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:24:55 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/16 18:54:12 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 20:16:33 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(unsigned char c)
+int	ft_isalpha(int c)
 {
 	if (c >= 65 && c <= 90)
 	{

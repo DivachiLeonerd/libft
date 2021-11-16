@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:06:29 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/16 19:27:32 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 20:16:44 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include<stdio.h>
 
 typedef unsigned int	t_size_t;
-int			ft_isalpha(unsigned char c);
+int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);
 int			ft_isascii(int ch);
