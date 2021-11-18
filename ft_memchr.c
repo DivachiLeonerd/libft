@@ -1,11 +1,28 @@
-void *ft_memchr(const void *s, int c, unsigned int n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/28 16:19:32 by atereso-          #+#    #+#             */
+/*   Updated: 2021/11/16 18:56:08 by atereso-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, unsigned int n)
 {
-	while (*s && n > 0)
+	unsigned char	*s0;
+
+	s0 = (unsigned char *)s;
+	while (*s0 && n > 0)
 	{
-		if (*s == (char*)c)
-			return (s);
+		if (*s0 == (unsigned char)c)
+			return ((void *)s);
 		else
-			s++;
+			s0++;
 	}
 	return (NULL);
 }

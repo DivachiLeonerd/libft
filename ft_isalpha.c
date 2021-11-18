@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atereso- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:24:55 by atereso-          #+#    #+#             */
-/*   Updated: 2021/10/18 18:32:46 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 20:16:33 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <ctype.h>
-#include <stdio.h>
 
-int	ft_isalpha(unsigned char c)
+#include "libft.h"
+
+int	ft_isalpha(int c)
 {
 	if (c >= 65 && c <= 90)
 	{
