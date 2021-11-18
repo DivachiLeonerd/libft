@@ -1,5 +1,5 @@
 #include "mylib_ft"
-int	isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if (isdigit(c) || isalpha(c))
 	{
