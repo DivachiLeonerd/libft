@@ -6,21 +6,25 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:06:29 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/10 17:24:41 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 20:16:44 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include<unistd.h>
+# include<stdlib.h>
+# include<stdio.h>
+
 typedef unsigned int	t_size_t;
-int			ft_isalpha(unsigned char c);
+int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);
 int			ft_isascii(int ch);
 int			ft_isprint(int ch);
 int			ft_strlen(const char *str);
-void		*ft_memset(void *mem_loc, int c, int n);
+void		*ft_memset(void *mem_loc, int c, unsigned int n);
 void		ft_bzero(void *s, t_size_t n);
 void		*ft_memcpy(void *dest, const void *src, t_size_t n);
 void		*ft_memmove(void *dst, const void *src, t_size_t len);

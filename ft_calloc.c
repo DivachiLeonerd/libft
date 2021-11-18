@@ -6,11 +6,11 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:17:04 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/10 17:56:31 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:54:29 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(unsigned int count, unsigned int size)
 {

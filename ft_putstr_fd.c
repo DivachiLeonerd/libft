@@ -6,11 +6,11 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 17:54:23 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/10 18:33:09 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:56:41 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include"libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

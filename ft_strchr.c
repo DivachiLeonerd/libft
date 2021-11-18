@@ -6,11 +6,11 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:25:09 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/12 11:38:01 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:56:51 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

@@ -6,11 +6,11 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:24:44 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/12 10:57:12 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:54:59 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include "libft.h"
 
 static	char	*alloc_string(int n);
 

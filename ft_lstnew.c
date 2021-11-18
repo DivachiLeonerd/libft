@@ -6,12 +6,11 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 10:11:03 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/10 17:15:38 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:55:40 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {
