@@ -6,26 +6,33 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:51:08 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/16 18:57:31 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/26 19:00:16 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+static char	*findback_c(char *start_s, const char *end_s, int c)
 {
-	int	i;
-
-	while (s[i])
+	if (c > 256)
+		c = c - 256;
+	while (end_s != start_s)
 	{
-		i++;
-	}
-	while (i >= 0)
-	{
-		if ((int)*s == c)
-			return ((char *)s);
-		else
-			s--;
+		end_s--;
+		if (*end_s == c)
+			return ((char *)end_s);
 	}
 	return (NULL);
+}
+
+char	*ft_strrchr(const char *s, int c)
+{
+	int		i;
+	char	*start;
+
+	start = (char *)s;
+	i = 0;
+	while (*s)
+		s++;
+	return (findback_c(start, ++s, c));
 }

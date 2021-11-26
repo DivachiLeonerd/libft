@@ -6,11 +6,13 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:49:57 by atereso-          #+#    #+#             */
-/*   Updated: 2021/10/28 16:50:41 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/25 17:04:35 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int dstsize)
+#include"libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	int	i;
 

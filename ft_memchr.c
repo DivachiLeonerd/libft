@@ -6,23 +6,33 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:19:32 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/16 18:56:08 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/26 16:43:56 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, unsigned int n)
+static	int	is_too_big(int c)
 {
-	unsigned char	*s0;
+	if (c > 256)
+		return (c - 256);
+	else
+		return (c);
+}
 
-	s0 = (unsigned char *)s;
-	while (*s0 && n > 0)
-	{
-		if (*s0 == (unsigned char)c)
-			return ((void *)s);
-		else
-			s0++;
-	}
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	unsigned int	i;
+	unsigned char	*array;
+
+	array = (unsigned char *)s;
+	i = 0;
+	if (!s || !n)
+		return (NULL);
+	c = is_too_big(c);
+	while ((array [i] != (unsigned char)c) && n > i)
+		i++;
+	if (array[i] == c)
+		return (&(array[i]));
 	return (NULL);
 }

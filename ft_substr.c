@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 17:25:39 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/16 18:57:40 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/25 17:08:06 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@
 
 #include "libft.h"
 
-typedef unsigned int	t_size_t;
-
-char	*ft_substr(char const *s, t_size_t start, t_size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	int		i;
 	char	*alloc;
