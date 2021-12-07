@@ -6,34 +6,35 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:15:11 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/12 11:05:37 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/06 19:28:30 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
+
 int	ft_atoi(const char *str)
 {
-	int	negative_counter;
 	int	number;
 	int	i;
+	int	neg;
 
-	i = 0;
+	neg = 1;
 	number = 0;
-	negative_counter = 0;
-	while (str[i])
+	i = 0;
+	while (str[i] == '\t' || str[i] == '\n'
+		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+		i++;
+	if (str[i] == '+')
+		i++;
+	else if (str[i] == '-')
 	{
-		if ((str[i] >= 48 && str[i] <= 57) || (str[i] == 43 || str[i] == 45))
-		{
-			if (str[i] == 45)
-			{
-				negative_counter++;
-				i++;
-			}
-			else if (str[i] >= 10)
-				number = (str[i] - 48) * 10 + number;
-			else if (str [i] < 10)
-				number = str[i] - 48;
-			i++;
-		}
+		neg = -1;
+		i++;
 	}
-	return (number);
+	while (ft_isdigit(str[i]))
+	{
+		number = (str[i] - 48) + number * 10;
+		i++;
+	}
+	return (number * neg);
 }

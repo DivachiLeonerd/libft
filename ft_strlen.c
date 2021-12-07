@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:50:50 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/22 16:56:44 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/30 12:43:30 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ int	ft_strlen(const char *str)
 		counter++;
 		str++;
 	}
-	return (counter--);
+	return (counter);
 }

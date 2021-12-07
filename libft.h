@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:06:29 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/25 17:14:54 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/30 12:19:07 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include<unistd.h>
 # include<stdlib.h>
 # include<stdio.h>
+# include<string.h>
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);

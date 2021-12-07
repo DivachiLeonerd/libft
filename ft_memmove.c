@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:24:27 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/25 17:49:12 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/06 18:35:27 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	dest = (unsigned char *)dst;
 	source = (unsigned char *)src;
+	if (!dst && !src)
+		return (0);
 	while (len)
 	{
 		if (dst > src)
@@ -31,11 +33,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 				*--dest = *--source;
 		}
 		else
-		{
-			*dest = *source;
-			dest++;
-			source++;
-		}
+			*dest++ = *source++;
 		len--;
 	}
 	return (dst);

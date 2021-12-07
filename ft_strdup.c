@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 15:56:05 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/16 18:56:55 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/04 15:32:09 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,19 @@ char	*ft_strdup(const char *s1)
 	char	*alloc;
 
 	i = 0;
-	while (s1[i])
-	{
-		i++;
-	}
-	alloc = malloc (i * sizeof(char) + 1);
+	alloc = malloc((ft_strlen(s1) + 1) * sizeof(char));
 	if (!alloc)
 		return (NULL);
-	else
-		return (alloc);
+	while (i <= ft_strlen(s1))
+	{
+		alloc[i] = ((char *)s1)[i];
+		i++;
+	}
+	return (alloc);
 }
+
+// int	main(void)
+// {
+// 	printf("string normal:%s\n", strdup("coucou"));
+// 	printf("string de moi:%s\n", ft_strdup("coucou"));
+// }

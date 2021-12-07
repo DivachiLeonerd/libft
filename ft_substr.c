@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 17:25:39 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/25 17:08:06 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/04 17:30:41 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,35 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		i;
-	char	*alloc;
+	char			*str;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	size;
 
-	i = 0;
-	alloc = malloc(len * sizeof(char));
-	if (!alloc)
-	{
+	if (!s)
 		return (NULL);
-	}
-	while (*s)
+	size = ft_strlen(s);
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	i = start;
+	j = 0;
+	if (start < size)
 	{
-		alloc[i] = *s;
-		s++;
-		i++;
+		while (i < start + len && s[i] != '\0')
+		{
+			str[j] = s[i];
+			j++;
+			i++;
+		}
 	}
-	return (alloc);
+	str[j] = '\0';
+	return (str);
 }
+
+// int	main(void)
+// {
+// 	char	*s1 = "Tripoulle";
+
+// 	printf("string minha:%s", ft_substr("tripouille", 100, 1));
+// }
