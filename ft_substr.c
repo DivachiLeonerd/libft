@@ -5,16 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/18 11:58:07 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/18 11:58:13 by afonso           ###   ########.fr       */
+/*   Created: 2021/12/13 13:49:48 by afonso            #+#    #+#             */
+/*   Updated: 2021/12/13 13:49:51 by afonso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-typedef unsigned int	t_size_t;
-
-char	*ft_substr(char const *s, t_size_t start, t_size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	int		i;
 	char	*alloc;

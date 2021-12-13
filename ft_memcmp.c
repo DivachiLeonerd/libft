@@ -6,23 +6,26 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:23:40 by atereso-          #+#    #+#             */
-/*   Updated: 2021/10/28 16:24:13 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/25 16:57:51 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
+#include"libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	if (*(char *)s1 == *(char *)s2)
-		return (0);
-	while (*(char *)s1 && *(char *)s2 && n > 0)
+	unsigned char			*string1;
+	unsigned char			*string2;
+	unsigned int			i;
+
+	i = 0;
+	string1 = (unsigned char *)s1;
+	string2 = (unsigned char *)s2;
+	while (n > i)
 	{
-		if (*(char *)s1 == *(char *)s2)
-		{
-			s1++;
-			s2++;
-		}
-		else
-			return (*(char *)s1 - *(char *)s2);
+		if (string1[i] != string2[i])
+			return (string1[i] - string2[i]);
+		i++;
 	}
 	return (0);
 }

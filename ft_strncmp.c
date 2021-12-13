@@ -6,13 +6,15 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:27:20 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/12 12:16:04 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/25 17:19:22 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while (*s1 && *s2)
+	while (n)
 	{
 		if (*s1 == *s2)
 		{
@@ -21,6 +23,7 @@ int	ft_strncmp(const char *s1, const char *s2)
 		}
 		else
 			return (s1 - s2);
+		n--;
 	}
 	return (0);
 }
