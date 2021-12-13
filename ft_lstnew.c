@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 10:11:03 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/16 18:55:40 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/13 14:36:02 by afonso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	void	*_content;
-	int		i;
-	char	*parameter;
-	t_list	new_list;
+	t_list	*new_element;
 
-	parameter = (char *)content;
-	i = 0;
-	_content = malloc(sizeof(content));
-	if (!_content)
-	{
+	new_element = malloc(sizeof(t_list));
+	if (!new_element)
 		return (NULL);
-	}
-	while (parameter[i])
-	{
-		((char *)_content)[i] = parameter[i];
-		i++;
-	}
-	new_list.content = _content;
-	new_list.next = NULL;
-	return ((t_list *)_content);
+	new_element->content = content;
+	new_element->next = NULL;
+	return (new_element);
 }

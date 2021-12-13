@@ -6,7 +6,7 @@
 /*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 11:04:09 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/18 15:26:02 by afonso           ###   ########.fr       */
+/*   Updated: 2021/12/13 14:35:09 by afonso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (new && lst)
 	{
-		new->next = (*lst)->next;
+		new->next = *lst;
 		*lst = new;
 	}
 }
