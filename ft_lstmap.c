@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 16:01:10 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/16 19:13:41 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/11/18 12:22:37 by afonso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list			*newlst_head;
+	t_list	*newlst_head;
 
 	newlst_head = ft_lstnew(f(lst));
 	while (lst)
@@ -24,7 +24,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstdelone(ft_lstlast(newlst_head), del);
 			return (NULL);
 		}
-		ft_lstadd_back(newlst_head, ft_lstnew(f(lst)));
+		ft_lstadd_back(&newlst_head, ft_lstnew(f(lst)));
 	}
 }
 /*

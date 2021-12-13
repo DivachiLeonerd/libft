@@ -11,8 +11,8 @@
       "environment": [],
       "program": "/home/afonso/Documents/GitHub/libft/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
-      "MIMode": "lldb",
-      "miDebuggerPath": "/usr/bin/lldb",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
       "externalConsole": false,
       "setupCommands": [
         {
