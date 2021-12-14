@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afonso <afonso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 16:01:10 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/16 19:13:41 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/13 17:45:41 by afonso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,23 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list			*newlst_head;
+	t_list	*newlst_head;
+	t_list	*new_element;
 
-	newlst_head = ft_lstnew(f(lst));
+	newlst_head = ft_lstnew(f(lst->content));
+	lst = lst->next;
 	while (lst)
 	{
-		if (!ft_lstnew(f(lst)))
+		new_element = ft_lstnew(f(lst->content));
+		if (!new_element)
 		{
-			ft_lstdelone(ft_lstlast(newlst_head), del);
-			return (NULL);
+			del(new_element->content);
+			ft_lstclear(&lst, new_element);
 		}
-		ft_lstadd_back(newlst_head, ft_lstnew(f(lst)));
+		ft_lstadd_back(newlst_head, new_element);
+		lst = lst->next;
 	}
+	return (newlst_head);
 }
 /*
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
