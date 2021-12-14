@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 18:17:21 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/16 18:56:36 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/10 17:33:18 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putnbr_fd(int n, int fd)
 	char	*string;
 
 	i = 0;
-	string = ft_itoa(n);
+	*string = ft_itoa(n);
 	while (string[i])
 	{
 		write(fd, &string[i], 1);

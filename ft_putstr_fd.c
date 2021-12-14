@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 17:54:23 by afonso            #+#    #+#             */
-/*   Updated: 2021/11/16 18:56:41 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/10 17:34:29 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int		i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{

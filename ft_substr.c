@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 17:25:39 by atereso-          #+#    #+#             */
-/*   Updated: 2021/12/04 17:30:41 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/10 17:30:17 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	size = ft_strlen(s);
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
+	size = ft_strlen(s);
 	i = start;
 	j = 0;
 	if (start < size)
