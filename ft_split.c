@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 10:16:20 by afonso            #+#    #+#             */
-/*   Updated: 2021/12/11 17:46:13 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/15 18:34:49 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int	how_many_char(char const *s, char c, int wordnum)
 	chrnum = 0;
 	counter = 0;
 	i = 0;
-	while (s[i] && counter <= wordnum)
+	while (s[i] && (counter <= wordnum))
 	{
 		if (s[i] != c)
 		{
@@ -102,7 +102,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	wordcount = word_count(s, c);
 	//printf("%d", wordcount);
-	split = malloc((wordcount + 1) * sizeof(char));
+	split =(char)malloc((wordcount + 1) * sizeof(char));
 	while (i < wordcount)
 	{
 		aux = how_many_char(s, c, i + 1);
@@ -126,11 +126,13 @@ char	**ft_split(char const *s, char c)
 int main(void)
 {
 	int c = ' ';
-	char string[] = "ola esta tudo ty jytdf yudy";
+	char string[] = "Isto sao 4 palavras";
 	int i;
 	char	**split;
 
 	i = word_count(string, c);
+	printf("%d\n", i);
+	printf("%d\n", how_many_char(string, ' ', 3));
 	split = ft_split(string, c);
 	while (i >= 0)
 	{
