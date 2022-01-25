@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:53:08 by atereso-          #+#    #+#             */
-/*   Updated: 2021/12/06 18:32:46 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/19 12:22:28 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*dest0;
-	char	*src0;
+	unsigned char	*dest0;
+	unsigned char	*src0;
 
 	dest0 = (unsigned char *)dest;
 	src0 = (unsigned char *)src;

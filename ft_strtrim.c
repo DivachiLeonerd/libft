@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 15:54:17 by afonso            #+#    #+#             */
-/*   Updated: 2021/12/07 13:25:18 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/19 12:33:40 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	alloc[index] = '\0';
 	return (alloc);
 }
-
-// int	main(void)
-// {
-// 	const char 	*s1 = "  teste  ";
-// 	const char	*s2 = " ";
-
-// 	ft_strtrim(s1, s2);
-// }

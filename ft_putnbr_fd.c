@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 18:17:21 by afonso            #+#    #+#             */
-/*   Updated: 2021/12/10 17:33:18 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:00:55 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,21 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int		i;
-	char	*string;
-
-	i = 0;
-	*string = ft_itoa(n);
-	while (string[i])
+	if (n == -2147483648)
 	{
-		write(fd, &string[i], 1);
-		i++;
+		ft_putstr_fd("-2147483648", fd);
+		return ;
 	}
-	write(fd, &string[i], 1);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = -n;
+	}
+	if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd(n % 10 + 48, fd);
+	}
+	else
+		ft_putchar_fd(n + 48, fd);
 }

@@ -6,11 +6,13 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 16:50:50 by atereso-          #+#    #+#             */
-/*   Updated: 2021/11/30 12:43:30 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/19 12:41:44 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	counter;
 

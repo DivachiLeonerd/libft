@@ -6,7 +6,7 @@
 /*   By: atereso- <atereso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 14:47:47 by afonso            #+#    #+#             */
-/*   Updated: 2021/12/06 17:01:27 by atereso-         ###   ########.fr       */
+/*   Updated: 2021/12/21 20:36:03 by atereso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	alloc = malloc((find_mallocsize(i, j, s1, s2)) * sizeof(char));
+	alloc = malloc((find_mallocsize(i, j, s1, s2) + 1) * sizeof(char));
 	if (!alloc)
 		return (NULL);
 	while (s1[i])
