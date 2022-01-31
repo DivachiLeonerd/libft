@@ -71,9 +71,7 @@ static char const	*return_word(char const *s, int c, int wordnum)
 {
 	int	i;
 	int	counter;
-	int	chrnum;
 
-	chrnum = 0;
 	counter = 0;
 	i = 0;
 	while (s[i] && (counter <= wordnum))
