@@ -14,8 +14,9 @@
 
 static char	**free_split(int i, char **split)
 {
-	while (i-- < 0)
+	while (i-- > 0)
 		free(split[i]);
+    free(split);
 	return (NULL);
 }
 
@@ -114,24 +115,29 @@ char	**ft_split(char const *s, char c)
 	return (split);
 }
 
-// int	main(void)
-// {
-// 	char	**_split;
-// 	int		i;
-// 	int		j;
-// 	char	ch = ' ';
+/* int	main(void)
+ {
+ 	char	**_split;
+ 	int		i;
+ 	int		j;
 
-// 	i = 0;
-// 	_split = ft_split("Hwllo Wolrd", ch);
-// 	if (!_split)
-// 		return (1);
-// 	while (_split[i])
-// 	{
-// 		j = 0;
-// 		while (_split[i][j] != 0)
-// 			write(1, (_split[i]) + j++, 1);
-// 		write(1, "\n",1);
-// 		i++;
-// 	}
-// 	free_split(i, _split);
-// }
+	i = 0;
+ 	_split = ft_split("  Tripouille  ", ' ');
+ 	if (!_split)
+ 		return (1);
+ 	while (_split[i])
+ 	{
+ 		j = 0;
+ 		while (_split[i][j] != 0)
+ 			write(1, (_split[i]) + j++, 1);
+ 		write(1, "\n",1);
+        printf("len of string:%lu\n", strlen(_split[i]));
+ 		i++;
+ 	}
+    if (_split[1] == NULL)
+        printf("hello there\n");
+    printf("number of strings:%d\n", i);
+    //free(_split[0]);
+    //free(_split);
+ 	free_split(i, _split);
+ }*/

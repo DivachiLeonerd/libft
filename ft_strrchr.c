@@ -27,11 +27,9 @@ static char	*findback_c(char *start_s, const char *end_s, int c)
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
 	char	*start;
 
 	start = (char *)s;
-	i = 0;
 	while (*s)
 		s++;
 	return (findback_c(start, ++s, c));

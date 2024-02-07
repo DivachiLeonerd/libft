@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			str = malloc(sizeof(char) * (ft_strlen(s) - start + 1));
 	}
 	else
-		str = malloc(2 * sizeof(char));
+		str = malloc(1 * sizeof(char));
 	if (!str)
 		return (NULL);
 	i = start;
@@ -41,11 +41,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
-// int main(void)
-// {
-// 	char	*string;
-
-// 	string = ft_substr("Ola a todos,como estao?", 4, 1);
-// 	printf("%s\n", string);
-// 	free(string);
-// }
+/* int main(void)
+ {
+ 	char	*mysub;
+    char    *sub;
+ 	mysub = ft_substr("Tripouille", 100, 1);
+ 	sub = ft_substr("Tripouille", 100, 1);
+ 	printf("%s & %p & %lu\n", mysub, mysub, strlen(mysub));
+ 	printf("%s & %p & %lu\n", sub, sub, strlen(sub));
+    free(sub);
+ 	free(mysub);
+    }*/
